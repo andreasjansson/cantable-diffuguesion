@@ -1,10 +1,10 @@
 # Cantable Diffuguesion
 
+[![Replicate](https://replicate.com/andreasjansson/cantable-diffuguesion/badge)](https://replicate.com/andreasjansson/cantable-diffuguesion)
+
 _Bach chorale generation and harmonization_
 
 ![future bach](future-bach.png)
-
-[![Replicate](https://replicate.com/andreasjansson/cantable-diffuguesion/badge)](https://replicate.com/andreasjansson/cantable-diffuguesion)
 
 ## Usage
 
