@@ -19,7 +19,7 @@ For harmonization we use [tinyNotation](https://web.mit.edu/music21/doc/moduleRe
 
 Cantable Diffuguesion is a diffusion model trained to generate Bach chorales. Four-part chorales are presented to the network as 4-channel arrays. The pitches of the individual parts are activated in the corresponding channel of the array. Here is a plot of a single input example, where the four channels are plotted on separate images:
 
-<img width="200" height="200" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/inputs.png" />
+<img width="300" height="300" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/inputs.png" />
 
 As in Stable Diffusion, a U-Net is trained to predict the noise residual.
 
@@ -27,7 +27,7 @@ After training the generative model we add 8 channels to the inputs, with the mi
 
 The two plots below show a mask and a masked input array:
 
-<img width="200" height="200" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/mask.png" /> <img width="200" height="200" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/masked-inputs.png" />
+<img width="300" height="300" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/mask.png" /> <img width="200" height="200" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/masked-inputs.png" />
 
 ## Dataset
 
