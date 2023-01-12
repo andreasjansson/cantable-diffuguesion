@@ -17,13 +17,21 @@ For harmonization we use [tinyNotation](https://web.mit.edu/music21/doc/moduleRe
 
 ## Training
 
-Cantable Diffuguesion is a diffusion model trained to generate Bach chorales. Four-part chorales are presented to the network as 4-channel images. As in Stable Diffusion, a U-Net is trained to predict the noise residual.
+Cantable Diffuguesion is a diffusion model trained to generate Bach chorales. Four-part chorales are presented to the network as 4-channel arrays. The pitches of the individual parts are activated in the corresponding channel of the array. Here is a plot of a single input example, where the four channels are plotted on separate images:
 
-After training the generative model we add 12 channels to the inputs, with the middle four channels representing a mask, and the last four channels are masked chorales. We mask the four channels individually, as opposed to [Stable Diffusion Inpainting](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting) that use a one-channel mask.
+<img width="200" height="200" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/inputs.png" />
+
+As in Stable Diffusion, a U-Net is trained to predict the noise residual.
+
+After training the generative model we add 8 channels to the inputs, with the middle four channels representing a mask, and the last four channels are masked chorales. We randomly mask the four channels individually, as opposed to [Stable Diffusion Inpainting](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting) that use a one-channel mask.
+
+The two plots below show a mask and a masked input array:
+
+<img width="200" height="200" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/mask.png" /> <img width="200" height="200" src="https://github.com/andreasjansson/cantable-diffuguesion/raw/main/masked-inputs.png" />
 
 ## Dataset
 
-We use all four-part pieces in the [Music21 Bach Chorales corpus](https://web.mit.edu/music21/doc/moduleReference/moduleCorpusChorales.html). 85% are used for training.
+We use all four-part pieces in the [Music21 Bach Chorales corpus](https://web.mit.edu/music21/doc/moduleReference/moduleCorpusChorales.html). 85% are used for training, the rest for validation and testing.
 
 ## Inspiration
 
